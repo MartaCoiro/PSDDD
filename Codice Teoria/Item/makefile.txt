@@ -1,0 +1,18 @@
+link-int: array.o utils.o main.o item-int.o
+	gcc array.o utils.o main.o item-int.o -o provaitem.exe
+
+link-str: array.o utils.o main.o item-string.o
+	gcc array.o utils.o main.o item-string.o -o provaitem.exe
+
+main.o:
+	gcc -c main.c
+item-int.o:
+	gcc -c item-int.c
+item-string.o:
+	gcc -c  item-string.c
+array.o:
+	gcc -c array.c
+utils.o:
+	gcc -c utils.c
+clean:
+	rm -f array.o utils.o main.o item-int.o item-string.o provaitem.exe
